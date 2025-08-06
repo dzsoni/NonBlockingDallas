@@ -11,7 +11,7 @@
 #define _NBDARRAY_PP(a) Serial.print(a);
 #define _NBDARRAY_PL(a) Serial.println(a);
 #else
-#define _NBDARRRY_PP(a)
+#define _NBDARRAY_PP(a)
 #define _NBDARRAY_PL(a)
 #endif
 
