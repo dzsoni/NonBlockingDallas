@@ -60,7 +60,7 @@ void NonBlockingDallas::begin(NBD_resolution res, NBD_unitsOfMeasure uom, unsign
     _tempInterval = tempInterval;
     _unitsOM = uom;
     _currentState = notFound;
-    _conversionMillis = _dallasTemp->millisToWaitForConversion(_res);
+    if(_dallasTemp) _conversionMillis = _dallasTemp->millisToWaitForConversion(_res);
     rescanWire();
 
     if ((_tempInterval < _conversionMillis) || (_tempInterval > 4294967295UL))
